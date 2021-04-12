@@ -1,0 +1,10 @@
+<form novalidate [formGroup]="formTodo" (ngSubmit)="onSave(formTodo.value)">
+  <input *ngIf="editTodo" type="text" formControlName="_id" name="id" id="id" class="form-control" readonly/>
+  <div class="form-group row">
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="name" name="name" id="name" placeholder="Name" />
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-large btn-block mb-2">Save</button>
+</form>

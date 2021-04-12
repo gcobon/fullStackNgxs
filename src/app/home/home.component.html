@@ -1,0 +1,21 @@
+<header>
+  <app-header></app-header>
+</header>
+
+<div class="container">
+  <div class="d-flex justify-content-end mb-2">
+    <button class="btn btn-warning btn-lg" (click)="onShowForm()">Add todo</button>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <app-todos-list></app-todos-list>
+    </div>
+    <ng-container *ngIf="showForm$ |async as visible">
+      <div class="col-6">
+        <app-form></app-form>
+      </div>
+    </ng-container>
+
+  </div>
+</div>
